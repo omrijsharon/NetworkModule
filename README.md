@@ -17,7 +17,7 @@ will create a network with:
 3. hidden layer: 8 nodes, with SeLU as activation function 
 4. output layer: 4 nodes, with a Identity activation function
 
-notice that Identity() is a linear activation function. It is exacly like not putting any activation function, yet it is necessary that each layer which is not the 1st layer will have an activation function in pytorch sequential. In other words, when no activation function is needed, use functional.Identity().
+notice that Identity() is a linear activation function. It is exacly like not putting any activation function on the layer. Yet, it is necessary that each layer will have an activation function, except for the 1st/Input layer. In other words, *when no activation function is needed, use functional.Identity()*.
 
 Also notice that the length of the activation_func list is always smaller by 1 than the layers' list length , because the 1st layer never gets an activation function.
 
@@ -39,7 +39,7 @@ net = Network(L, activation_func, dropout=0.5)
 ```
 
 The network can also use dropout. In this example, the dropout probability is set to 0.5.
-IMPORTANT: dropout should not be used on the weights between the last 2 layers. In the last example we have 4 layers. Dropout will be activated only on the weights between layers 1-2 and 2-3.
+- IMPORTANT: dropout should not be used on the weights between the last 2 layers. In the last example we have 4 layers. Dropout will be activated only on the weights between layers 1-2 and 2-3.
 
 ## functional
 This module is an extension to torch.nn module. 
