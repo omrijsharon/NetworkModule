@@ -1,7 +1,7 @@
 # NetworkModule
 An easy was to create a fully connected network with pytorch. Contains additional module functions that can be added to Sequential.
 
-**How to use the module?**
+##How to use the module?
 
 The module gets a list of layers and a list of activation functions.
 In the layer's list, each element corresponds to the number of nodes in the layer, and the length of the list is the number of layers in the network.
@@ -45,7 +45,7 @@ net = Network(L, activation_func, dropout=0.5)
 The network can also use dropout. In this example, the dropout probability is set to 0.5.
 IMPORTANT: dropout should not be used on the weights between the last 2 layers. In the last example we have 4 layers. Dropout will be activated only on the weights between layers 1-2 and 2-3.
 
-**functional**
+##functional
 This module is an extension to torch.nn module. 
 You can use these functions like you would use nn.Sigmoid(). Most convenient in torch Sequential:
 
