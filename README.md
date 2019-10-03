@@ -7,11 +7,10 @@ The module gets a list of layers and a list of activation functions.
 In the layer's list, each element corresponds to the number of nodes in the layer, and the length of the list is the number of layers in the network.
 
 i.e.:
-
+```
 L = [16, * 2 * [8] , 4]
-
 activation_func = [*(len(L)-2) * [functional.SeLU()], functional.Identity()]
-
+```
 will create a network with:
 
 1st layer - input: 16 nodes
@@ -30,26 +29,18 @@ Also notice that the length of the activation_func list is always smaller by 1 t
 
 example:
 
-
+```
 from NetworkModule import Network
-
 from NetworkModule import functional as functional
-
 import torch.nn as nn
 
-
 input_dim = 16
-
 output_dim = 4
-
 hidden_layers = 2*[8]
-
 L = [input_dim, *hidden_layers, output_dim]
-
 activation_func = [functional.SeLU(), functional.Sin(), nn.Softmax(dim=1)]
-
 net = Network(L, activation_func, dropout=0.5)
-
+```
 
 The network can also use dropout. In this example, the dropout probability is set to 0.5.
 IMPORTANT: dropout should not be used on the weights between the last 2 layers. In the last example we have 4 layers. Dropout will be activated only on the weights between layers 1-2 and 2-3.
@@ -60,7 +51,7 @@ You can use these functions like you would use nn.Sigmoid(). Most convenient in 
 
 - functional.SeLU()
 
-Paper: https://arxiv.org/pdf/1706.02515.pdf , TL;DR: like leaky ReLU, without the problems of exploding/vanishing gradients.
+Paper: (https://arxiv.org/pdf/1706.02515.pdf) , TL;DR: like leaky ReLU, without the problems of exploding/vanishing gradients.
 
 - functional.Sin()
 
