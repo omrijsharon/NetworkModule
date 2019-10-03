@@ -41,7 +41,7 @@ net = Network(L, activation_func, dropout=0.5)
 The network can also use dropout. In this example, the dropout probability is set to 0.5.
 - IMPORTANT: dropout should not be used on the weights between the last 2 layers. In the last example we have 4 layers. Dropout will be activated only on the weights between layers 1-2 and 2-3.
 
-## functional
+## functional module
 This module is an extension to torch.nn module. 
 You can use these functions like you would use nn.Sigmoid(). Most convenient in torch Sequential:
 
