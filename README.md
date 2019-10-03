@@ -55,7 +55,8 @@ a sin function that can be used in Sequential.
 
 - functional.Cos()
 
-a cos function that can be used in Sequential
+a cos function that can be used in Sequential.
 
 - functional.Identity()
+
 a linear activation function that does nothing to its input and can be used in Sequential.
