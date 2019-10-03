@@ -7,12 +7,12 @@ This module contains an additional function modules that can be used with pytorc
 The module gets a list of layers and a list of activation functions.
 In the layer's list, each element corresponds to the number of nodes in the layer, and the length of the list is the number of layers in the network.
 
-i.e.:
+i.e.: the code
 ```
 L = [16, * 2 * [8] , 4]
 activation_func = [*(len(L)-2) * [functional.SeLU()], functional.Identity()]
 ```
-will create a network with:
+will help us to create a network with:
 1. input layer: 16 nodes
 2. hidden layer: 8 nodes, with SeLU as activation function 
 3. hidden layer: 8 nodes, with SeLU as activation function 
