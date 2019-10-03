@@ -60,7 +60,7 @@ You can use these functions like you would use nn.Sigmoid(). Most convenient in 
 
 - functional.SeLU()
 
-Paper: https://arxiv.org/pdf/1706.02515.pdf
+Paper: https://arxiv.org/pdf/1706.02515.pdf , TL;DR: like leaky ReLU, without the problems of exploding/vanishing gradients.
 
 - functional.Sin()
 
