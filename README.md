@@ -1,5 +1,6 @@
 # NetworkModule
-An easy way to create a fully connected network with pytorch. Contains additional module functions that can be added to Sequential.
+An easy way to create a fully connected network with pytorch. 
+This module contains an additional function modules that can be used with pytorch Sequential.
 
 ## How to use the module?
 
