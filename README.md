@@ -12,10 +12,10 @@ L = [16, * 2 * [8] , 4]
 activation_func = [*(len(L)-2) * [functional.SeLU()], functional.Identity()]
 ```
 will create a network with:
-1. input: 16 nodes
-2. hidden: 8 nodes, with SeLU as activation function 
-3. hidden: 8 nodes, with SeLU as activation function 
-4. output: 4 nodes, with a Identity activation function
+1. input layer: 16 nodes
+2. hidden layer: 8 nodes, with SeLU as activation function 
+3. hidden layer: 8 nodes, with SeLU as activation function 
+4. output layer: 4 nodes, with a Identity activation function
 
 notice that Identity() is a linear activation function. It is exacly like not putting any activation function, yet it is necessary that each layer which is not the 1st layer will have an activation function in pytorch sequential. In other words, when no activation function is needed, use functional.Identity().
 
