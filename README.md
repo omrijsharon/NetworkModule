@@ -49,15 +49,15 @@ You can use these functions like you would use nn.Sigmoid(). Most convenient in 
 - functional.SeLU()
 
 Paper: https://arxiv.org/pdf/1706.02515.pdf , TL;DR: like leaky ReLU, without the problems of exploding/vanishing gradients.
-
-- functional.Sin()
-
+```
+functional.Sin()
+```
 a sin function that can be used in Sequential.
-
-- functional.Cos()
-
+```
+functional.Cos()
+```
 a cos function that can be used in Sequential.
-
-- functional.Identity()
-
+```
+functional.Identity()
+```
 a linear activation function that does nothing to its input and can be used in Sequential.
