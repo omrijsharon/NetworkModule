@@ -45,18 +45,22 @@ The network can also use dropout. In this example, the dropout probability is se
 ## functional module
 This module is an extension to torch.nn module. 
 You can use these functions like you would use nn.Sigmoid(). Most convenient in torch Sequential:
-
-- functional.SeLU()
-
+### SeLU
+```
+functional.SeLU()
+```
 Paper: https://arxiv.org/pdf/1706.02515.pdf , TL;DR: like leaky ReLU, without the problems of exploding/vanishing gradients.
+### Sine
 ```
 functional.Sin()
 ```
 a sin function that can be used in Sequential.
+### Cosine
 ```
 functional.Cos()
 ```
 a cos function that can be used in Sequential.
+### Identity/Linear
 ```
 functional.Identity()
 ```
